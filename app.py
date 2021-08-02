@@ -22,13 +22,13 @@ data = load_data()
 
 names=data['Username']
 names1=data['Username'].to_list()
-
+date=data['Date']
 
 
 options=st.multiselect("Employee Name",names1)
 
 AndroidLogin=data['Android Login']
-TotalLogin=data['Total Login ']
+TotalLogin=data['Total Login']
 df=pd.DataFrame({'Names':data['User'].isin(options),'Android Logins':data['androidlogin'].values,'Total Logins':data['Total Login '].values})
 #if st.sidebar.checkbox('Log In Data', True, key=1):
 	#st.write(df)
@@ -45,7 +45,7 @@ fig.update_layout(barmode='group',height=600,width=800)
 st.plotly_chart(fig)
 
 
-st.markdown('### Outlook Activity Analysis')
+st.markdown('### Outlook Activity Analysis %s')
 st.write('This is an analysis of the outlook activity of each employee.\n Mapping the earliest and the latest Login in outlook from a Laptop or Phone.\n The number of dots against your name shows your login activity for that day.')
 st.write('The Graph has been split into to the first graph is for alphabet A-K, The second graphis for L-Z')
 DATA_URL1=('logindetails.xlsx')
