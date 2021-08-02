@@ -45,7 +45,7 @@ fig.update_layout(barmode='group',height=600,width=800)
 st.plotly_chart(fig)
 
 
-st.markdown('### Outlook Activity Analysis %s'%(date[1]))
+st.markdown('### Outlook Activity Analysis %s'%(date[0]))
 st.write('This is an analysis of the outlook activity of each employee.\n Mapping the earliest and the latest Login in outlook from a Laptop or Phone.\n The number of dots against your name shows your login activity for that day.')
 st.write('The Graph has been split into to the first graph is for alphabet A-K, The second graphis for L-Z')
 DATA_URL1=('logindetails.xlsx')
