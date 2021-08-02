@@ -15,6 +15,7 @@ def load_data():
 	return data 
 
 data = load_data()
+date=data['Date']
 st.set_page_config(layout="wide")
 st.title('Login Data Analysis %s'%(date[0]))
 st.write("### This analysis is done on the data extracted from the outlook servers###")
@@ -23,7 +24,7 @@ st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The grap
 
 names=data['Username']
 names1=data['Username'].to_list()
-date=data['Date']
+
 st.write(date)
 
 options=st.multiselect("Employee Name",names1)
