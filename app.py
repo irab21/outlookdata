@@ -8,10 +8,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from plotly.subplots import make_subplots
 
-st.set_page_config(layout="wide")
-st.title("Login Data Analysis")
-st.write("### This analysis is done on the data extracted from the outlook servers###")
-st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The graph shows the number of times the Employee has logged in from a phone and the total number of times the Employee Logged in for the entire week.")
 DATA_URL=('android_login.xlsx')
 def load_data():
 	data=pd.read_excel(DATA_URL)
@@ -19,6 +15,11 @@ def load_data():
 	return data 
 
 data = load_data()
+st.set_page_config(layout="wide")
+st.title('Login Data Analysis %s'%(date[0]))
+st.write("### This analysis is done on the data extracted from the outlook servers###")
+st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The graph shows the number of times the Employee has logged in from a phone and the total number of times the Employee Logged in for the entire week.")
+
 
 names=data['Username']
 names1=data['Username'].to_list()
