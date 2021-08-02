@@ -23,7 +23,7 @@ data = load_data()
 names=data['Username']
 names1=data['Username'].to_list()
 date=data['Date']
-
+st.write(date)
 
 options=st.multiselect("Employee Name",names1)
 
