@@ -25,7 +25,6 @@ st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The grap
 names=data['Username']
 names1=data['Username'].to_list()
 
-st.write(date)
 
 options=st.multiselect("Employee Name",names1)
 
