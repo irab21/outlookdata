@@ -27,7 +27,7 @@ names1=data['Username'].to_list()
 
 options=st.multiselect("Employee Name",names1)
 
-AndroidLogin=data['androidlogin']
+AndroidLogin=data['Android Login']
 TotalLogin=data['Total Login ']
 df=pd.DataFrame({'Names':data['User'].isin(options),'Android Logins':data['androidlogin'].values,'Total Logins':data['Total Login '].values})
 #if st.sidebar.checkbox('Log In Data', True, key=1):
