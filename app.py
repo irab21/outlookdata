@@ -12,7 +12,7 @@ st.set_page_config(layout="wide")
 st.title("Login Data Analysis")
 st.write("### This analysis is done on the data extracted from the outlook servers###")
 st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The graph shows the number of times the Employee has logged in from a phone and the total number of times the Employee Logged in for the entire week.")
-DATA_URL=('C:\\Users\\DELL\\Desktop\\android_login.xlsx')
+DATA_URL=('android_login.xlsx')
 def load_data():
 	data=pd.read_excel(DATA_URL)
 
@@ -48,7 +48,7 @@ st.plotly_chart(fig)
 st.markdown('### Outlook Activity Analysis')
 st.write('This is an analysis of the outlook activity of each employee.\n Mapping the earliest and the latest Login in outlook from a Laptop or Phone.\n The number of dots against your name shows your login activity for that day.')
 st.write('The Graph has been split into to the first graph is for alphabet A-K, The second graphis for L-Z')
-DATA_URL1=('C:\\Users\\DELL\\Desktop\\logindetails.xlsx')
+DATA_URL1=('logindetails.xlsx')
 def load_data():
 	data1=pd.read_excel(DATA_URL1)
 
@@ -77,7 +77,7 @@ fig2=px.scatter(df,x='Names',y='Logins',height=1000,width=800,color='Operating S
 st.plotly_chart(fig2)
 
 
-DATA_URL2=('C:\\Users\\DELL\\Desktop\\logindetailspart2.xlsx')
+DATA_URL2=('logindetailspart2.xlsx')
 def load_data():
 	data2=pd.read_excel(DATA_URL2)
 
