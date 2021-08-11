@@ -48,7 +48,7 @@ st.plotly_chart(fig)
 
 st.markdown('### Outlook Activity Analysis %s'%(date[0]))
 st.write('This is an analysis of the outlook activity of each employee.\n Mapping the earliest and the latest Login in outlook from a Laptop or Phone.\n The number of dots against your name shows your login activity for that day.')
-st.write('The Graph has been split into to the first graph is for alphabet A-K, The second graphis for L-Z')
+st.write('The Graph has been split into to the first graph is for alphabet A-M, The second graphis for N-Z')
 DATA_URL1=('logindetails.xlsx')
 def load_data():
 	data1=pd.read_excel(DATA_URL1)
