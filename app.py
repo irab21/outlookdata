@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from plotly.subplots import make_subplots
 
-DATA_URL=('androidlogindata.xlsx')
+DATA_URL=('android_login.xlsx')
 def load_data():
 	data=pd.read_excel(DATA_URL)
 
