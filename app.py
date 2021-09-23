@@ -22,14 +22,20 @@ st.write("### This analysis is done on the data extracted from the outlook serve
 st.write("\n### Login Data: Phone Logins Vs Total Number of Logins###\n The graph shows the number of times the Employee has logged in from a phone and the total number of times the Employee Logged in for the entire week.")
 
 
-names=data['Username']
-names1=data['Username'].to_list()
+names=data['User']
+
+names1=names.copy().to_list() 
+options=st.multiselect('Name',names1)
+#st.write(data1)
+
+if not options:
+    filtered_data = data.copy()
+else:
+    filtered_data = data.loc[data["User"].isin(options)]
 
 
-options=st.multiselect("Employee Name",names1)
-
-AndroidLogin=data['Android Login']
-TotalLogin=data['Total Login']
+AndroidLogin=filtered_data['Android Login']
+TotalLogin=filtered_data['Total Login']
 df=pd.DataFrame({'Names':data['User'].isin(options),'Android Logins':data['Android Login'].values,'Total Logins':data['Total Login'].values})
 #if st.sidebar.checkbox('Log In Data', True, key=1):
 	#st.write(df)
